@@ -10,7 +10,7 @@ body {
 
 
 .header {
- font-size: 0.5em;
+ font-size: 0.7em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -606,6 +606,6 @@ select {
 
 
 main {
-    margin-top: 20%; /* Même valeur que la hauteur de votre header */
+  margin-top: 30%; /* Même valeur que la hauteur de votre header */
 }
 
