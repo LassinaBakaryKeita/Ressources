@@ -1,0 +1,611 @@
+/* === BASE STYLES === */
+/* Import de la police Fredoka depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+body {
+    font-family: "Fredoka", sans-serif;
+    font-size: 2em ;
+    background-color: #e4edff;
+}
+
+
+.header {
+ font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 12%;
+  font-weight: 550;
+  background-color: #e4edff;
+  z-index: 100;
+}
+
+.logo {
+  /* margin: 0 10px 0 50px; */
+  margin: 0 1vw 0 3vw;
+  transition: all 0.2s ease;
+}
+
+.logo-img {
+  /* margin: 3px 0 0 -5px; */
+  margin: 0.5vh 0 0 -1vw;
+  /* width: 25px; */
+  width: 2.2vw;
+  background-color: #0051ff;
+  /* padding: 7px; */
+  padding: 0.5em;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 25px;
+}
+
+.logo-img:hover {
+  background-color: #5b8fff;
+}
+
+.ILIA-btn {
+  font-weight: 550;
+  color: white;
+  background-color: #874ce4;
+  /* padding: 8px; */
+  padding: 5em;
+  border-width: 0;
+  border-radius: 20em;
+  /* padding: 14px 20px; */
+  padding: 2.5vh 1.5vw;
+  min-width: 50px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ILIA-btn:hover {
+  background-color: #e4edff;
+  color: #874ce4;
+  border-color: #874ce4;
+  border-width: 1px;
+}
+
+.header-items {
+  font-size: 100%;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.header-items a {
+  text-decoration: none;
+}
+
+.header-items:hover {
+  /* font-size: 17px; */
+  font-size: 110%;
+}
+
+.accueil {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.ressources {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.club-ilia {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.contact {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.accueil a:visited {
+  color: #874ce4;
+}
+
+.ressources a:visited {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+.club-ilia a:visited {
+  color: #874ce4;
+  transition: color 0.2s;
+}
+
+.contact a:visited {
+  color: #2157cb;
+  transition: color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .header-items {
+    font-size: 80%;
+    transition: all 0.2s ease;
+  }
+  .header-items:hover {
+    font-size: 90%;
+  }
+}
+
+
+
+/* === UTILITY CLASSES === */ 
+.centrer{ /* Classe pour centrer le texte */
+    text-align: center;
+}
+
+.cercle { /* Style des éléments circulaires de base */
+    background-color: #e4edff;
+    width: 70px;              /* largeur du cercle */
+    height: 70px;             /* hauteur du cercle */
+    border: 2px solid black;   /* contour du cercle */
+    border-radius: 50%;        /* arrondir à 100% => cercle */
+    display: flex;             /* centrer le texte */
+    align-items: center;       /* centrer verticalement */
+    justify-content: center;   /* centrer horizontalement */
+    font-weight: bold;         /* texte en gras */
+    color: #4a54e1;          /* coleur du texte */ 
+}
+
+.rectangle-1 {  /* Style des boutons rectangulaires (version 1) */
+    color: #4a54e1; 
+    height: 40px;
+    width: 100px; /* Augmenter la largeur */
+    border: 2px solid black;
+    border-radius: 20px; /* Ajouter des bordures arrondies */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Ajouter du padding */
+    box-sizing: border-box; /* Inclure border/padding dans la largeur */
+    font-size: 0.4em; /* Réduire la taille du texte si nécessaire */
+    white-space: nowrap; /* Empêcher le retour à la ligne */
+    overflow: hidden; /* Cacher le débordement */
+    text-overflow: ellipsis; /* Ajouter "..." si le texte est trop long */
+    text-decoration: none; /* Enlève le soulignement des liens */
+}
+
+
+/* Style pour tous les états du lien */
+.rectangle-1:link, 
+.rectangle-1:visited, 
+.rectangle-1:hover, 
+.rectangle-1:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.cercle-1 { /* Style des cercles de grande taille (version 1) */
+    width: 130px;
+    height: 130px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column; /* colonne pour texte et bouton */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #4a54e1;
+    gap: 5px; /* espace entre le texte et le bouton */
+    padding: 5px; /* pour éviter que ça touche les bords */
+}
+
+
+.conteneur2{ /* Conteneur flexible avec espacement */
+    margin-top: 10px;
+    display:flex;              /* centrer le texte */
+   /* align-items: center;        centrer verticalement */
+    justify-content:space-around;  /* centrer horizontalement */ 
+    gap:10px;                   /*Espacer les elements du conteneur*/
+}
+
+.rectangle{ /* Style des boutons rectangulaires (version 2) */
+    background-color: #e4edff;
+    color: #4a54e1; 
+    height:30px;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+    /* Arrondir uniquement les côtés gauche et droit */
+    border-top-left-radius: 50px;     /* coin en haut à gauche */
+    border-bottom-left-radius: 50px;  /* coin en bas à gauche */
+    border-top-right-radius: 50px;    /* coin en haut à droite */
+    border-bottom-right-radius: 50px; /* coin en bas à droite */
+
+    display: flex;               /* active flexbox */
+    align-items: center;         /* centre verticalement */
+    justify-content: center;     /* centre horizontalement */
+    height: 30px;                 /* un peu plus grand pour éviter débordement */
+    min-width: 50px;              /* évite que le texte dépasse */
+    padding: 5px 10px;           /* espace interne */
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+
+.conteneur3{ /* Conteneur flexible alternative */
+    display:flex;              /* centrer le texte */
+    align-items: center;       /* centrer verticalement */
+    justify-content: center;   /* centrer horizontalement */ 
+    gap:10px;                   /*Espacer les elements du conteneur*/
+}
+
+.cercle, .rectangle, .rectangle-1{ /* Effets communs aux éléments interactifs */
+    cursor: pointer;       /* curseur main au survol */
+    transition: all 0.2s ease;
+}
+
+.cercle:hover, .rectangle:hover, .rectangle-1:hover{ /* Effet au survol des éléments interactifs */
+    background-color: #4a54e1;  /* couleur au survol */
+    color:white; 
+}
+
+
+.cercle:active, .rectangle:active, .rectangle-1:active { /* Effet lors du clic */
+    background-color: #aaa;  /* couleur quand on clique */
+    transform: scale(0.95);    /* effet "pressé" */
+}
+
+
+section { /* Espacement entre les sections */
+    margin-bottom: 200px; /* espace de 200px sous chaque section */
+}
+
+.conteneur4{ /* Conteneur de formulaire */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px; 
+}
+
+#filter, .envoyer{ /*Permettre aux options de filtration (Section Cours) et envoie(formulaire) d'avoir le curseur main */
+    cursor: pointer;
+    
+}
+
+.envoyer{ /* Style du bouton d'envoi */
+    background-color: #4a54e1;
+    color:white;
+    width: 70px;
+    height: 30px;
+    /* Arrondir uniquement les côtés gauche et droit */
+    border-top-left-radius: 50px;     /* coin en haut à gauche */
+    border-bottom-left-radius: 50px;  /* coin en bas à gauche */
+    border-top-right-radius: 50px;    /* coin en haut à droite */
+    border-bottom-right-radius: 50px; /* coin en bas à droite */
+
+}
+
+.envoyer:hover{ /* Effet au survol du bouton d'envoi */
+    background-color: #353ecc
+}
+
+
+
+/* === FORM STYLES === */
+form{ /* Style du formulaire principal */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+
+.cercle-1 {  /*Cercle contenant le label du semestre + le bouton interne.*/
+    transition: all 0.3s ease; /*transition: rend plus fluide les effets (hover, focus, etc.) */
+    overflow: hidden; /*overflow: hidden; empêche le contenu interne (ex: .rectangle-1) de dépasser du cercle*/
+}
+
+/* Cache complètement les éléments non visibles */
+.cercle-1[style*="display: none"] {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+[data-type].selected { /* Style des boutons sélectionnés */
+    background-color: #4a54e1 !important;
+    color: white !important;
+}
+
+#upload-section { /* Section upload */  
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px dashed #4a54e1;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+#file-input { /*Champ de sélection de fichier dans la section d’upload.*/
+    margin: 10px 0; /*margin: espace vertical pour l’aérer*/
+    width: 100%;   /*width: 100% pour qu’il prenne toute la largeur du conteneur (utile sur mobile)*/
+}
+
+@keyframes fadeIn { /* Animation pour la section d'upload */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, h2 { /* Style des titres avec dégradé */
+     color: #2157cb; 
+}
+
+
+h4,.couleur1{ /* Style des sous-titres */
+    color: #1338BE;
+}
+
+
+
+
+/* ---------- Responsive (Media Queries) ---------- */
+
+/* Grands écrans intermédiaires (≤1200px) */
+@media (max-width: 1200px) {
+  body { font-size: 1.5em; }
+  .conteneur2, .conteneur3 { flex-wrap: wrap; gap: 12px; }
+  .cercle-1 { width: 120px; height: 120px; }
+  .rectangle-1 { font-size: 0.55em; }
+  form { max-width: 700px; }
+}
+
+/* Tablettes / petits laptops (≤768px) */
+@media (max-width: 768px) {
+  body { font-size: 1.1em; }
+
+  header .conteneur1 {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .conteneur1 a { padding: 4px 8px; }
+
+  #search, #filter {
+    width: 90%;
+    max-width: 440px;
+    font-size: 1em;
+  }
+
+  .conteneur2, .conteneur3 { flex-wrap: wrap; gap: 12px; }
+
+  .cercle-1 {
+    width: 110px;
+    height: 110px;
+    gap: 6px;
+    padding: 6px;
+  }
+  .cercle { width: 60px; height: 60px; }
+
+  .rectangle-1 {
+    width: 90px;
+    height: 36px;
+    font-size: 0.6em;
+    padding: 0 10px;
+  }
+  .rectangle {
+    min-width: 90px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 0.9em;
+  }
+
+  section { margin-bottom: 120px; }
+
+  form {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+/* Téléphones (≤480px) */
+@media (max-width: 480px) {
+  body { font-size: 0.95em; }
+
+  h1 { font-size: 1.4em; }
+  h2 { font-size: 1.2em; }
+
+  .conteneur2, .conteneur3 { gap: 8px; }
+
+  .cercle-1 {
+    width: 92px;
+    height: 92px;
+    gap: 4px;
+    padding: 4px;
+  }
+  .cercle { width: 56px; height: 56px; }
+
+  .rectangle-1 {
+    width: 84px;
+    height: 32px;
+    font-size: 0.58em;
+    padding: 0 6px;
+  }
+  .rectangle {
+    min-width: 80px;
+    height: 32px;
+    font-size: 0.8em;
+    padding: 0 10px;
+  }
+
+  #search, #filter { width: 95%; }
+
+  /* Les groupes de sélecteurs du formulaire passent à la ligne proprement */
+  .selectors .conteneur2,
+  .selectors .conteneur3 { flex-wrap: wrap; }
+}
+
+/* Très petits écrans (≤360px) */
+@media (max-width: 360px) {
+  .cercle-1 { width: 82px; height: 82px; }
+  .rectangle-1 { width: 76px; height: 30px; font-size: 0.55em; }
+}
+
+/* Accessibilité : réduire les animations si l’utilisateur le demande */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+
+/* Règles générales pour les barres */
+input[type="text"],
+input[type="search"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;          /* occupe toute la largeur du conteneur */
+  max-width: 100%;      /* ne dépasse jamais le parent */
+  padding: 10px;        /* espace intérieur pour que ça respire */
+  margin: 5px 0;        /* espace entre les champs */
+  box-sizing: border-box; /* évite que padding fasse déborder */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Section des SMS (les barres d’options) */
+.sms-section input,
+.sms-section select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Responsivité : petits écrans */
+@media screen and (max-width: 768px) {
+  .search-bar,
+  .section-bar,
+  .options-bar,
+  .document-form input,
+  .document-form textarea {
+    width: 100% !important;   /* force la largeur à 100% */
+    font-size: 14px;          /* texte plus petit */
+  }
+}
+
+/* Responsivité : très petits écrans (téléphones) */
+@media screen and (max-width: 480px) {
+  input,
+  textarea,
+  select {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* === IMAGES === */
+.apropos-image { /* Style de l'image dans la section "A propos" */ 
+    display: block;
+    margin: auto auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.cours-image{  /* Style de l'image dans la section Cours */
+    display: block;
+    margin: auto auto;
+    width: 30%;
+    height: 20%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.conteneur5{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+
+/* === MODULE RESULTS === */
+.module-results { /* Conteneur des résultats de recherche */
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.module-card { /* Carte individuelle de module */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.download-btn { /* Bouton de téléchargement */
+    display: inline-block;
+    background-color: #4a54e1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover { /* Effet au survol du bouton de téléchargement */
+    background-color: #3a46d0;
+    transform: translateY(-2px);
+}
+
+.no-results { /* Message quand aucun résultat */
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Agrandir le champ texte ( pour sections cours dispoibles et formulaires) */
+#doc-nom,
+#search,
+#filter{
+    width: 400px;   /* largeur */
+    height: 40px;   /* hauteur */
+    font-size: 0.6em; /* taille du texte */
+    padding: 8px;    /* marge interne pour respirer */
+}
+
+/* Agrandir la zone de description (pour la section formulaire) */
+#doc-description{
+    width: 400px;   /* largeur */
+    height: 120px;  /* hauteur */
+    font-size: 0.6em;
+    padding: 8px;
+    resize: vertical; /* l'utilisateur peut étirer seulement en hauteur */
+}
+
+
+main {
+    margin-top: 20%; /* Même valeur que la hauteur de votre header */
+}
+

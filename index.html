@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources</title>
+    <link href="style.css" rel="stylesheet">  <!-- Fichier CSS principal -->
+
+</head>
+
+
+<body>
+     <!-- Menu de navigation principal -->
+    <header>
+        <!-- header part -->
+       <div class="header">
+
+            <!-- Logo cliquable -->
+            <div class="logo">
+             <img class="logo-img" src="logo.png" alt="logo" title="logo"/>
+            </div>
+
+             <!-- Bouton ILIA -->
+            <div class="header-items">
+             <a href="#"><button class="ILIA-btn">ILIA</button></a>
+            </div>
+
+            s<!-- Liens de navigation -->
+            <div class="header-items accueil">
+             <a href="index.html">Accueil</a>
+            </div>
+
+            <div class="header-items ressources">
+             <a href="ressoources.html">Ressources</a>
+            </div>
+
+            <div class="header-items club-ilia">
+             <a href="Club-ilia.html">Club ILIA</a>
+            </div>
+
+            <div class="header-items contact">
+             <a href="contact-index.html">Contactez Nous</a>
+            </div>
+       </div>
+
+    </header>
+
+    <main>
+        <!--  Section "A propos" - Présentation générale -->
+        <section id="a-propos" class="centrer">
+           <h1 class="couleur"> Bienvenue dans la page Ressource</h1>
+           <p  class="couleur1">Ici vous trouverez toutes les informations sur les cours disponibles de la filière <strong> ILIA </strong> </p>
+           <p class="couleur1"> <strong> Des ressources d’aujourd’hui pour façonner les experts d’ILIA de demain </strong> </p>
+          <img src="ILIA.png" alt="Logo d'Ingénierie Logiciel et Intelligence Artificielle" title="Ingénierie Logicielle et Intelligence Artificielle" class="apropos-image">
+        </section >
+
+        
+
+
+        <!-- Section des Cours disponibles avec recherche-->
+        <section id="cours" class="centrer">
+            <h2 class="couleur"> Cours diponibles </h2>
+            <!-- Barre de recherche de modules -->
+            <input type="text" id="search" placeholder="Rechercher un module..." >
+            <div id="module-results" class="module-results"></div>
+
+            <!-- Filtrage par Semestre -->
+            <select id="filter" >
+                <option value="all">Tous les Semestres</option >
+                <option value="Semestre1">Semestre 1</option>
+                <option value="Semestre2">Semestre 2</option>
+                <option value="Semestre3"> Semestre 3</option>
+                <option value="Semestre4"> Semestre 4</option>
+                <option value="Semestre5"> Semestre 5</option>
+            </select>  
+            <!-- Conteneur des semestres et image -->
+           <div class="conteneur5"> 
+                <div class="conteneur2">
+                    <div class="cercle-1 semestre">
+                        <span>S1</span>
+                        <a href="https://drive.google.com/drive/folders/1NswyLiImbKNFtQWwHHEs3lHQRDdrlPnh?usp=drive_link" download="ILIA_S1.zip" class="rectangle-1">Télécharger</a>
+                    </div>
+
+                    <div class="cercle-1 semestre">
+                        <span>S2</span>
+                        <a href="https://drive.google.com/drive/u/3/folders/1C5dr7tOPCtpRoXlLVf_gaPjPzl3O7AN-" download="ILIA_S2.zip" class="rectangle-1">Télécharger</a>
+                    </div>
+
+                    <div class="cercle-1 semestre">
+                        <span>S3</span>
+                        <a href="" download="" class="rectangle-1">Comming Soon</a>
+                    </div>
+
+                    <div class="cercle-1 semestre">
+                        <span>S4</span>
+                        <a href="" download="" class="rectangle-1">Comming Soon</a>
+                    </div>
+
+                    <div class="cercle-1 semestre">
+                        <span>S5</span>
+                        <a href="" download="" class="rectangle-1">Comming Soon</a>
+                    </div>
+
+                </div>
+
+                <img src="IA.jpeg" alt="image d'Intelligence Artificielle" title="IA" class="cours-image">
+            </div>
+            
+              
+        </section>
+
+        <!--Section Soumission de documents-->
+
+        <section id="soumission">
+            <form id="upload-form" class="conteneur4">
+                <h2 class="centrer couleur">Soumission d'un document</h2>
+                
+                <input type="text" id="doc-nom" placeholder="Nom du document" required>
+                <textarea id="doc-description" placeholder="Description du document ......." rows="4" required></textarea>
+
+                <div class="selectors">
+                    
+                    <!-- Semestre -->
+                    <div>
+                        <h4>Semestre</h4>
+                        <div class="conteneur2">
+                            <button type="button" class="cercle" data-type="semestre" data-value="S1">S1</button>
+                            <button type="button" class="cercle" data-type="semestre" data-value="S2">S2</button>
+                            <button type="button" class="cercle" data-type="semestre" data-value="S3">S3</button>
+                            <button type="button" class="cercle" data-type="semestre" data-value="S4">S4</button>
+                            <button type="button" class="cercle" data-type="semestre" data-value="S5">S5</button>
+                        </div>
+                    </div>
+
+                    <!-- Type -->
+                    <div>
+                        <h4>Type de document</h4>
+                        <div class="conteneur3">
+                            <button type="button" class="rectangle" data-type="doc-type" data-value="cours">Cours</button>
+                            <button type="button" class="rectangle" data-type="doc-type" data-value="td">TD</button>
+                            <button type="button" class="rectangle" data-type="doc-type" data-value="td">TP</button>
+                            <button type="button" class="rectangle" data-type="doc-type" data-value="projet">Projet</button>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Format -->
+                    <div>
+                        <h4>Format</h4>
+                        <div class="conteneur3">
+                            <button type="button" class="rectangle" data-type="format" data-value="pdf">PDF</button>
+                            <button type="button" class="rectangle" data-type="format" data-value="word">Word</button>
+                            <button type="button" class="rectangle" data-type="format" data-value="excel">Excel</button>
+                            <button type="button" class="rectangle" data-type="format" data-value="Zip">Zip</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Upload (initialement cachée) -->
+                <div id="upload-section" style="display:none;">
+                    <input type="file" id="file-input" required>
+                    <button type="submit" class="envoyer">Envoyer</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Pied de page (vide actuellement) -->
+    </footer>
+    
+    <!-- Scripts JavaScript -->
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const filter = document.getElementById('filter');
+            
+            filter.addEventListener('change', function() {
+                const selectedValue = this.value;
+                const allCircles = document.querySelectorAll('.cercle-1');
+                
+                allCircles.forEach(circle => {
+                    const circleSemester = circle.querySelector('span').textContent;
+                    const shouldShow = selectedValue === 'all' || 
+                                    selectedValue.replace('Semestre', 'S') === circleSemester;
+                    
+                    circle.style.display = shouldShow ? 'flex' : 'none';
+                });
+            });
+            
+            // Initialise le filtre au chargement
+            filter.dispatchEvent(new Event('change'));
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
