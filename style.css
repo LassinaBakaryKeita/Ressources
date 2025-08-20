@@ -3,106 +3,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 
 body {
-    font-family: "Fredoka", sans-serif;
-    font-size: 2em ;
-    background-color: #e4edff;
+  margin: 5em 1em 0 1em;
+  font-family: "Fredoka", sans-serif;
+  background-color: #e4edff;
 }
-
-
-.header {
- font-size: 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.navigation-bar {
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
-  height: 12%;
-  font-weight: 550;
   background-color: #e4edff;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 100;
 }
 
-.logo {
-  /* margin: 0 10px 0 50px; */
-  margin: 0 1vw 0 3vw;
-  transition: all 0.2s ease;
-}
-
-.logo-img {
-  /* margin: 3px 0 0 -5px; */
-  margin: 0.5vh 0 0 -1vw;
-  /* width: 25px; */
-  width: 2.2vw;
-  background-color: #0051ff;
-  /* padding: 7px; */
-  padding: 0.5em;
-  border-radius: 100%;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  min-width: 25px;
-}
-
-.logo-img:hover {
-  background-color: #5b8fff;
-}
-
-.ILIA-btn {
+.navigation-item {
+  font-size: 65%;
   font-weight: 550;
-  color: white;
-  background-color: #874ce4;
-  /* padding: 8px; */
-  padding: 5em;
-  border-width: 0;
-  border-radius: 20em;
-  /* padding: 14px 20px; */
-  padding: 2.5vh 1.5vw;
-  min-width: 50px;
-  transition: all 0.2s ease;
-  cursor: pointer;
 }
 
-.ILIA-btn:hover {
-  background-color: #e4edff;
-  color: #874ce4;
-  border-color: #874ce4;
-  border-width: 1px;
-}
-
-.header-items {
-  font-size: 100%;
-  flex: 1;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.header-items a {
+.navigation-item a {
   text-decoration: none;
 }
 
-.header-items:hover {
-  /* font-size: 17px; */
+
+.logo img {
+  margin-left: 0.5em;
+  width: 45px;   /* taille fixe plus petite */
+  height: 45px;  /* garder un carré pour le rond */
+  background-color: #0051ff;
+  padding: 5px;   /* petit espace autour */
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: contain; /* ajuste l’image dans le cercle */
+}
+
+
+.accueil a {
+  color: #874ce4;
+}
+
+.ressources a {
+  color: #2157cb;
+}
+
+.club-ilia a {
+  color: #874ce4;
+}
+
+.ILIAFOLIO a {
+  color: #2157cb;
+}
+
+.contact a {
+  margin-right: 0.5em;
+  color: #874ce4;
+}
+
+.accueil:hover {
   font-size: 110%;
 }
 
-.accueil {
-  color: #874ce4;
-  transition: color 0.2s;
+.ressources:hover {
+  font-size: 110%;
 }
 
-.ressources {
-  color: #2157cb;
-  transition: color 0.2s;
+.club-ilia :hover {
+  font-size: 110%;
 }
 
-.club-ilia {
-  color: #874ce4;
-  transition: color 0.2s;
+.ILIAFOLIO :hover {
+  font-size: 110%;
 }
-
-.contact {
-  color: #2157cb;
-  transition: color 0.2s;
+.contact :hover {
+  font-size: 110%;
 }
 
 .accueil a:visited {
@@ -111,26 +88,26 @@ body {
 
 .ressources a:visited {
   color: #2157cb;
-  transition: color 0.2s;
 }
 
-.club-ilia a:visited {
+.club-ilia a :visited {
   color: #874ce4;
-  transition: color 0.2s;
+}
+
+.ILIAFOLIO a :visited {
+  color: #2157cb;
 }
 
 .contact a:visited {
-  color: #2157cb;
-  transition: color 0.2s;
+  color: #874ce4;
 }
 
-@media (max-width: 600px) {
-  .header-items {
-    font-size: 80%;
-    transition: all 0.2s ease;
-  }
-  .header-items:hover {
-    font-size: 90%;
+@media (min-width: 768px) {
+  /* .ilia-btn button {
+    opacity: 1;
+  } */
+  .navigation-item {
+    font-size: 1em;
   }
 }
 
@@ -166,7 +143,7 @@ body {
     justify-content: center;
     padding: 0 20px; /* Ajouter du padding */
     box-sizing: border-box; /* Inclure border/padding dans la largeur */
-    font-size: 0.4em; /* Réduire la taille du texte si nécessaire */
+    font-size: 0.6em; /* Réduire la taille du texte si nécessaire */
     white-space: nowrap; /* Empêcher le retour à la ligne */
     overflow: hidden; /* Cacher le débordement */
     text-overflow: ellipsis; /* Ajouter "..." si le texte est trop long */
@@ -343,15 +320,14 @@ form{ /* Style du formulaire principal */
     to { opacity: 1; }
 }
 
-h1, h2 { /* Style des titres avec dégradé */
-     color: #2157cb; 
+
+h1{
+ color:  #2157cb;  
 }
 
-
-h4,.couleur1{ /* Style des sous-titres */
-    color: #1338BE;
+p,h4{
+  color: #874ce4;
 }
-
 
 
 
@@ -606,6 +582,6 @@ select {
 
 
 main {
-  margin-top: 30%; /* Même valeur que la hauteur de votre header */
+  margin-top: 10%; /* Même valeur que la hauteur de votre header */
 }
 

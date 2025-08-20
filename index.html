@@ -10,36 +10,33 @@
 
 
 <body>
-     <!-- Menu de navigation principal -->
-    <header>
-        <!-- header part -->
-       <div class="header">
+   <header>
+       <div class="navigation-bar">
 
-            <!-- Logo cliquable -->
-            <div class="logo">
-             <img class="logo-img" src="logo.png" alt="logo" title="logo"/>
+            <div class="navigation-item logo">
+                <a href="#top">
+                    <img src="logo.png" alt="logo" title="logo"/>
+                </a>
             </div>
 
-             <!-- Bouton ILIA -->
-            <div class="header-items">
-             <a href="#"><button class="ILIA-btn">ILIA</button></a>
+            <div class="navigation-item accueil">
+                <a href="">Acceuil</a>
             </div>
 
-            <!-- Liens de navigation -->
-            <div class="header-items accueil">
-             <a href="index.html">Accueil</a>
+            <div class="navigation-item ressources">
+                <a href="">Ressources</a>
             </div>
 
-            <div class="header-items ressources">
-             <a href="ressoources.html">Ressources</a>
+            <div class="navigation-item club-ilia">
+                <a href="club-ilia.html">Club ILIA</a>
             </div>
 
-            <div class="header-items club-ilia">
-             <a href="Club-ilia.html">Club ILIA</a>
+            <div class="navigation-item ILIAFOLIO">
+                <a href="potfolio-etudiants.html">ILIAFOLIO</a>
             </div>
 
-            <div class="header-items contact">
-             <a href="contact-index.html">Contactez Nous</a>
+            <div class="navigation-item contact">
+                <a href="">Contactez nous</a>
             </div>
        </div>
 
@@ -48,9 +45,9 @@
     <main>
         <!--  Section "A propos" - Présentation générale -->
         <section id="a-propos" class="centrer">
-           <h1 class="couleur"> Bienvenue dans la page Ressource</h1>
-           <p  class="couleur1">Ici vous trouverez toutes les informations sur les cours disponibles de la filière <strong> ILIA </strong> </p>
-           <p class="couleur1"> <strong> Des ressources d’aujourd’hui pour façonner les experts d’ILIA de demain </strong> </p>
+           <h1 > Bienvenue dans la page Ressource</h1>
+           <p  >Ici vous trouverez toutes les informations sur les cours disponibles de la filière <strong> ILIA </strong> </p>
+           <p > <strong> Des ressources d’aujourd’hui pour façonner les experts d’ILIA de demain </strong> </p>
           <img src="ILIA.png" alt="Logo d'Ingénierie Logiciel et Intelligence Artificielle" title="Ingénierie Logicielle et Intelligence Artificielle" class="apropos-image">
         </section >
 
@@ -59,7 +56,7 @@
 
         <!-- Section des Cours disponibles avec recherche-->
         <section id="cours" class="centrer">
-            <h2 class="couleur"> Cours diponibles </h2>
+            <h1 > Cours diponibles </h1>
             <!-- Barre de recherche de modules -->
             <input type="text" id="search" placeholder="Rechercher un module..." >
             <div id="module-results" class="module-results"></div>
@@ -113,7 +110,7 @@
 
         <section id="soumission">
             <form id="upload-form" class="conteneur4">
-                <h2 class="centrer couleur">Soumission d'un document</h2>
+                <h1 class="centrer">Soumission d'un document</h1>
                 
                 <input type="text" id="doc-nom" placeholder="Nom du document" required>
                 <textarea id="doc-description" placeholder="Description du document ......." rows="4" required></textarea>
