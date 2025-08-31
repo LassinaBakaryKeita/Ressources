@@ -46,7 +46,7 @@ The Resources Page is organized into **three main sections**:
 
 - **HTML5**: page structure
 - **CSS3**: styling and responsive design
-- **JavaScript (Vanilla JS)**: dynamic management of search, filters, and form
+- **JavaScript **: dynamic management of search, filters, and form
 - **Google Drive**: hosting files for download
 
 ---
@@ -61,14 +61,7 @@ The Resources Page is organized into **three main sections**:
 
 ## 📁 Project Structure
 
-/ILIA-SITE
-│
-├─ index.html        # Resources Page
-├─ style.css         # Main stylesheet
-├─ script.js         # JS scripts for search and form
-├─ logo.png          # Program logo
-├─ ILIA.png          # About section image
-└─ IA.jpeg           # Courses section image
+<img width="570" height="276" alt="image" src="https://github.com/user-attachments/assets/ad48b957-a4a0-4100-9b69-0bad6c470585" />
 
 ---
 
